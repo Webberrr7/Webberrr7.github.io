@@ -23,7 +23,7 @@ repository               : "weberrr7/weberrr7.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Weibo Sun""
+  name             : "Weibo Sun"
   pronouns         : "he/him"# example: "she/her"  
   bio              : "Graduate student in Applied Mathematics & Statistics (Computational Applied Mathematics track) at Stony Brook University. Focus on numerical methods, scientific computing, and fluid dynamics."
   location         : "Stony Brook, NY"
