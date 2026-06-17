@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "iFluid — CFD Examples"
-permalink: /ifluid/
+title: "Portfolio"
+permalink: /portfolio/
 author_profile: true
 toc: true
 toc_label: "Examples"
