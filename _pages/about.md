@@ -7,9 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+Hi, I'm Weibo — a PhD student in Applied Mathematics & Statistics (Computational Applied Mathematics track) at Stony Brook University, working with Prof. Xiaolin Li. I spend most of my time at the intersection of numerical methods, scientific computing, and computational fluid dynamics.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+These days I'm working on **Particle-Resolved Direct Numerical Simulation (PR-DNS)** for cloud microphysics and turbulence, in collaboration with Brookhaven National Laboratory. My current project is teaching the **FronTierCpp** CFD framework to handle non-periodic (wall/Dirichlet) boundary conditions — which, it turns out, means swapping out FFT-based pressure solvers for Krylov/PETSc ones, and chasing down more than a few parallel-communication bugs along the way.
+
+Before all this, I earned an M.S. in Applied Mathematics & Statistics here at Stony Brook, and a double-major B.S. in Mathematics & Physics. My toolbox leans heavily on numerical linear algebra, numerical PDEs, and high-resolution finite-volume methods.
+
+If you'd like to see what fluids actually *look* like when you simulate them, check out my **[iFluid gallery](/ifluid/)** — or just drop me an email.
 
 A data-driven personal website
 ======
