@@ -1,15 +1,20 @@
 # CFD example animations
 
-Drop your exported GIFs in this folder using exactly these file names so the
-/ifluid/ gallery page picks them up automatically:
+Video animations embedded by the Portfolio gallery page (`_pages/ifluid.md`,
+served at `/portfolio/`). Each case is shown as serial vs. parallel for two
+fields:
 
-- `taylor-green.gif`        — Taylor–Green vortex
-- `lid-driven-cavity.gif`   — Lid-driven cavity
+| File | Case | Run | Field |
+|---|---|---|---|
+| `TG-3d-serial-velocity.mp4`     | Taylor–Green 3D   | serial   | velocity |
+| `TG-3d-serial-pressure.mp4`     | Taylor–Green 3D   | serial   | pressure |
+| `TG-3d-parallel-velocity.mp4`   | Taylor–Green 3D   | parallel | velocity |
+| `TG-3d-parallel-pressure.mp4`   | Taylor–Green 3D   | parallel | pressure |
+| `ldc2d-serial-velocity.mp4`     | Lid-driven cavity 2D | serial   | velocity |
+| `ldc2d-serial-pressure.mp4`     | Lid-driven cavity 2D | serial   | pressure |
+| `ldc2d-parallel-velocity.mp4`   | Lid-driven cavity 2D | parallel | velocity |
+| `ldc2d-parallel-pressure.mp4`   | Lid-driven cavity 2D | parallel | pressure |
 
-You can also add a still preview image for the Portfolio thumbnails (optional):
-
-- `taylor-green-thumb.png`
-- `lid-driven-cavity-thumb.png`
-
-If you use different names, update the `<img src=...>` paths in
-`_pages/ifluid.md` and the `excerpt` images in the two `_portfolio/*.md` files.
+To add or swap an animation, drop the `.mp4` here and reference it from a
+`<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block in
+`_pages/ifluid.md`. Keep files small (these are all < 3 MB) for fast loading.

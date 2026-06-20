@@ -8,41 +8,72 @@ toc_label: "Examples"
 toc_sticky: true
 ---
 
-A small gallery of incompressible Navier–Stokes simulations I produced with the
-**iFluid** incompressible Navier–Stokes solver in the **FronTier++**
-front-tracking library (Prof. Xiaolin Li's group, Stony Brook University).
-Each animation below is a standard CFD verification case, so the results can be
-checked at a glance against the well-known reference behavior.
+A gallery of incompressible Navier–Stokes simulations I produced with the
+**iFluid** solver in the **FronTier++** front-tracking library (Prof. Xiaolin
+Li's group, Stony Brook University). Each case is a standard CFD verification
+problem, shown for both the **velocity** and **pressure** fields.
 
-> All animations were generated from the solver's output, visualized in
-> **ParaView**, and exported to GIF. Click any animation to view it full size.
+For every animation the **serial** run (single process) is placed next to the
+**parallel** run (multiple MPI processes) so the two can be compared directly:
+a correct parallel implementation must reproduce the serial result. The pairs
+below match field-for-field, which is exactly the check used to validate the
+MPI/PETSc solver.
+
+> Animations were generated from the solver's output and rendered in
+> **ParaView**. Each pair below loops automatically; use the controls to pause
+> or scrub.
 
 ---
 
-## Taylor–Green Vortex
+## Taylor–Green Vortex (3D)
 
 A classic **accuracy-verification** problem: an array of counter-rotating
-vortices that decays in time under viscosity. The 2-D incompressible
-Navier–Stokes equations have an *exact analytical solution* for this flow, so it
-is the standard test for confirming that a solver reproduces the correct decay
-rate and vortex structure.
+vortices that decays in time under viscosity. The incompressible Navier–Stokes
+equations have an *exact analytical solution* for this flow, making it the
+standard test for confirming a solver reproduces the correct decay rate and
+vortex structure.
 
-- **Domain / BCs:** periodic unit square
-- **What to look for:** the four-vortex pattern stays symmetric while the
-  velocity magnitude decays smoothly and monotonically — matching the analytical
-  exponential decay.
+**Velocity field — serial vs. parallel**
 
-<figure>
-  <a href="/images/cfd/taylor-green.gif">
-    <img src="/images/cfd/taylor-green.gif" alt="Taylor–Green vortex simulation"
-         style="max-width:100%;border:1px solid #ddd;border-radius:6px;">
-  </a>
-  <figcaption>Taylor–Green vortex: velocity field decaying under viscosity.</figcaption>
-</figure>
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/TG-3d-serial-velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong> (1 process)</figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/TG-3d-parallel-velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI)</figcaption>
+  </figure>
+</div>
+
+**Pressure field — serial vs. parallel**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/TG-3d-serial-pressure.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong> (1 process)</figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/TG-3d-parallel-pressure.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI)</figcaption>
+  </figure>
+</div>
 
 ---
 
-## Lid-Driven Cavity
+## Lid-Driven Cavity (2D)
 
 The most widely used **benchmark** for incompressible flow solvers. Fluid sits
 in a square cavity whose top wall (the "lid") slides at constant velocity,
@@ -50,18 +81,43 @@ driving a large primary vortex in the center plus smaller counter-rotating
 vortices in the bottom corners. Results are conventionally compared against the
 Ghia, Ghia & Shin (1982) reference data.
 
-- **Domain / BCs:** unit square, moving top lid, no-slip on the other three walls
-- **What to look for:** a single primary circulation centered slightly toward the
-  top-right, with secondary vortices forming in the lower corners as the Reynolds
-  number increases.
+**Velocity field — serial vs. parallel**
 
-<figure>
-  <a href="/images/cfd/lid-driven-cavity.gif">
-    <img src="/images/cfd/lid-driven-cavity.gif" alt="Lid-driven cavity simulation"
-         style="max-width:100%;border:1px solid #ddd;border-radius:6px;">
-  </a>
-  <figcaption>Lid-driven cavity: streamlines / velocity field reaching steady state.</figcaption>
-</figure>
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d-serial-velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong> (1 process)</figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d-parallel-velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI)</figcaption>
+  </figure>
+</div>
+
+**Pressure field — serial vs. parallel**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d-serial-pressure.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong> (1 process)</figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d-parallel-pressure.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI)</figcaption>
+  </figure>
+</div>
 
 ---
 
