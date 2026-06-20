@@ -48,7 +48,7 @@ vortex structure.
       <source src="/images/cfd/TG-3d-parallel-velocity.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI)</figcaption>
+    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI, 2×2×1)</figcaption>
   </figure>
 </div>
 
@@ -67,19 +67,18 @@ vortex structure.
       <source src="/images/cfd/TG-3d-parallel-pressure.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI)</figcaption>
+    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI, 2×2×1)</figcaption>
   </figure>
 </div>
 
 ---
 
-## Lid-Driven Cavity (2D)
+## Lid-Driven Cavity (3D)
 
 The most widely used **benchmark** for incompressible flow solvers. Fluid sits
 in a square cavity whose top wall (the "lid") slides at constant velocity,
 driving a large primary vortex in the center plus smaller counter-rotating
-vortices in the bottom corners. Results are conventionally compared against the
-Ghia, Ghia & Shin (1982) reference data.
+vortices in the bottom corners.
 
 **Velocity field — serial vs. parallel**
 
@@ -96,7 +95,7 @@ Ghia, Ghia & Shin (1982) reference data.
       <source src="/images/cfd/ldc2d-parallel-velocity.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI)</figcaption>
+    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI, 2×2×1)</figcaption>
   </figure>
 </div>
 
@@ -115,7 +114,7 @@ Ghia, Ghia & Shin (1982) reference data.
       <source src="/images/cfd/ldc2d-parallel-pressure.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI)</figcaption>
+    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI, 2×2×1)</figcaption>
   </figure>
 </div>
 
