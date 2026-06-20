@@ -33,6 +33,8 @@ equations have an *exact analytical solution* for this flow, making it the
 standard test for confirming a solver reproduces the correct decay rate and
 vortex structure.
 
+**Input file:** max time = 5, max steps = 2000.
+
 **Velocity field — serial vs. parallel**
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
@@ -79,6 +81,8 @@ The most widely used **benchmark** for incompressible flow solvers. Fluid sits
 in a square cavity whose top wall (the "lid") slides at constant velocity,
 driving a large primary vortex in the center plus smaller counter-rotating
 vortices in the bottom corners.
+
+**Input file:** max time = 50, max steps = 1000.
 
 **Velocity field — serial vs. parallel**
 
