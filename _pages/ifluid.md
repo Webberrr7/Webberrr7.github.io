@@ -75,52 +75,82 @@ vortex structure.
 
 ---
 
-## Lid-Driven Cavity (3D)
+## Lid-Driven Cavity (2D) — Solver Comparison
 
-The most widely used **benchmark** for incompressible flow solvers. Fluid sits
-in a square cavity whose top wall (the "lid") slides at constant velocity,
-driving a large primary vortex in the center plus smaller counter-rotating
-vortices in the bottom corners.
+The same 2D lid-driven cavity test case, run with two different solvers —
+**FronTierCpp** and **PR-DNS** (Particle-Resolved Direct Numerical Simulation) —
+in both serial and parallel. The PR-DNS run is placed directly above the
+FronTierCpp run so the two **serial** results sit vertically adjacent for a
+direct comparison.
 
-**Input file:** max time = 50, max steps = 1000.
+> All four configurations advanced to step 10000, but their visualization output
+> frequency differed: **FronTierCpp wrote 708 frames** while **PR-DNS wrote
+> 10000 frames**.
 
-**Velocity field — serial vs. parallel**
-
-<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d-serial-velocity.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Serial</strong> (1 process)</figcaption>
-  </figure>
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d-parallel-velocity.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI, 2×2×1)</figcaption>
-  </figure>
-</div>
-
-**Pressure field — serial vs. parallel**
+### PR-DNS — Serial (PS)
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
   <figure style="flex:1 1 320px;margin:0;">
     <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d-serial-pressure.mp4" type="video/mp4">
+      <source src="/images/cfd/ldc2d_PS_velocity.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Serial</strong> (1 process)</figcaption>
+    <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
   </figure>
   <figure style="flex:1 1 320px;margin:0;">
     <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d-parallel-pressure.mp4" type="video/mp4">
+      <source src="/images/cfd/ldc2d_PS_pressure.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Parallel</strong> (MPI, 2×2×1)</figcaption>
+    <figcaption style="text-align:center;"><strong>Pressure</strong></figcaption>
   </figure>
 </div>
+
+### FronTierCpp — Serial (FS)
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d_FS_velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d_FS_pressure.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Pressure</strong></figcaption>
+  </figure>
+</div>
+
+### FronTierCpp — Parallel (FP)
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d_FP_velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d_FP_pressure.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Pressure</strong></figcaption>
+  </figure>
+</div>
+
+### PR-DNS — Parallel (PP)
+
+**No animation — the run diverged numerically.** The PR-DNS parallel
+configuration diverged at the second time step: the velocity field blew up, so
+the simulation itself never produced usable data to animate. This is a numerical
+divergence of the run, not a rendering or output problem.
+{: .notice--warning}
 
 ---
 

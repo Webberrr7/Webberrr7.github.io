@@ -1,19 +1,32 @@
 # CFD example animations
 
 Video animations embedded by the Portfolio gallery page (`_pages/ifluid.md`,
-served at `/portfolio/`). Each case is shown as serial vs. parallel for two
-fields:
+served at `/portfolio/`).
 
-| File | Case | Run | Field |
-|---|---|---|---|
-| `TG-3d-serial-velocity.mp4`     | Taylor–Green 3D   | serial   | velocity |
-| `TG-3d-serial-pressure.mp4`     | Taylor–Green 3D   | serial   | pressure |
-| `TG-3d-parallel-velocity.mp4`   | Taylor–Green 3D   | parallel | velocity |
-| `TG-3d-parallel-pressure.mp4`   | Taylor–Green 3D   | parallel | pressure |
-| `ldc2d-serial-velocity.mp4`     | Lid-driven cavity 2D | serial   | velocity |
-| `ldc2d-serial-pressure.mp4`     | Lid-driven cavity 2D | serial   | pressure |
-| `ldc2d-parallel-velocity.mp4`   | Lid-driven cavity 2D | parallel | velocity |
-| `ldc2d-parallel-pressure.mp4`   | Lid-driven cavity 2D | parallel | pressure |
+## Taylor–Green Vortex (3D) — serial vs. parallel
+
+| File | Run | Field |
+|---|---|---|
+| `TG-3d-serial-velocity.mp4`   | serial   | velocity |
+| `TG-3d-serial-pressure.mp4`   | serial   | pressure |
+| `TG-3d-parallel-velocity.mp4` | parallel | velocity |
+| `TG-3d-parallel-pressure.mp4` | parallel | pressure |
+
+## Lid-Driven Cavity (2D) — solver comparison
+
+Four configurations of the same 2D lid-driven cavity test case:
+FS = FronTierCpp serial, FP = FronTierCpp parallel, PS = PR-DNS serial,
+PP = PR-DNS parallel. PP has **no file** — that run diverged numerically at the
+second time step, so no animation could be produced.
+
+| File | Config | Field |
+|---|---|---|
+| `ldc2d_PS_velocity.mp4` | PR-DNS serial      | velocity |
+| `ldc2d_PS_pressure.mp4` | PR-DNS serial      | pressure |
+| `ldc2d_FS_velocity.mp4` | FronTierCpp serial | velocity |
+| `ldc2d_FS_pressure.mp4` | FronTierCpp serial | pressure |
+| `ldc2d_FP_velocity.mp4` | FronTierCpp parallel | velocity |
+| `ldc2d_FP_pressure.mp4` | FronTierCpp parallel | pressure |
 
 To add or swap an animation, drop the `.mp4` here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block in
