@@ -91,14 +91,14 @@ direct comparison.
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
   <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <video controls muted loop playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
       <source src="/images/cfd/ldc2d_PS_velocity.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
   </figure>
   <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <video controls muted loop playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
       <source src="/images/cfd/ldc2d_PS_pressure.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
