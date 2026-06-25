@@ -30,4 +30,6 @@ second time step, so no animation could be produced.
 
 To add or swap an animation, drop the `.mp4` here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block in
-`_pages/ifluid.md`. Keep files small (these are all < 3 MB) for fast loading.
+`_pages/ifluid.md`. Keep files small for fast loading — most are < 1 MB, but the
+PR-DNS serial (PS) files are large (~28 MB pressure, ~50 MB velocity) because
+PR-DNS wrote 10000 frames. Consider compressing those if page load is slow.
