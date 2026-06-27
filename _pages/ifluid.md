@@ -79,27 +79,46 @@ vortex structure.
 
 The same 2D lid-driven cavity test case, run with two different solvers —
 **FronTierCpp** and **PR-DNS** (Particle-Resolved Direct Numerical Simulation) —
-in both serial and parallel. The PR-DNS run is placed directly above the
-FronTierCpp run so the two **serial** results sit vertically adjacent for a
-direct comparison.
+in both serial and parallel. Each solver's serial and parallel runs are grouped
+together (serial above parallel) so the two PR-DNS runs and the two FronTierCpp
+runs can each be compared directly.
 
 > All four configurations advanced to step 10000, but their visualization output
-> frequency differed: **FronTierCpp wrote 708 frames** while **PR-DNS wrote
-> 10000 frames**.
+> frequency differed: **FronTierCpp wrote 708 frames** while **PR-DNS wrote 48
+> frames** (for both serial and parallel).
 
 ### PR-DNS — Serial (PS)
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
   <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
       <source src="/images/cfd/ldc2d_PS_velocity.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
   </figure>
   <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
       <source src="/images/cfd/ldc2d_PS_pressure.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Pressure</strong></figcaption>
+  </figure>
+</div>
+
+### PR-DNS — Parallel (PP)
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d_PP_velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d_PP_pressure.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <figcaption style="text-align:center;"><strong>Pressure</strong></figcaption>
@@ -143,14 +162,6 @@ direct comparison.
     <figcaption style="text-align:center;"><strong>Pressure</strong></figcaption>
   </figure>
 </div>
-
-### PR-DNS — Parallel (PP)
-
-**No animation — the run diverged numerically.** The PR-DNS parallel
-configuration diverged at the second time step: the velocity field blew up, so
-the simulation itself never produced usable data to animate. This is a numerical
-divergence of the run, not a rendering or output problem.
-{: .notice--warning}
 
 ---
 
