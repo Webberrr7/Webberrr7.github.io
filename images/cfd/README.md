@@ -21,10 +21,12 @@ PP = PR-DNS parallel. PR-DNS now writes 48 frames for both serial and parallel
 
 | File | Config | Field |
 |---|---|---|
-| `ldc2d_PS_velocity.mp4` | PR-DNS serial        | velocity |
-| `ldc2d_PS_pressure.mp4` | PR-DNS serial        | pressure |
-| `ldc2d_PP_velocity.mp4` | PR-DNS parallel      | velocity |
-| `ldc2d_PP_pressure.mp4` | PR-DNS parallel      | pressure |
+| `ldc2d_PS_velocity.mp4`        | PR-DNS serial        | velocity |
+| `ldc2d_PS_pressure.mp4`        | PR-DNS serial        | pressure |
+| `ldc2d_PS_velocity_vector.mp4` | PR-DNS serial        | velocity vector field |
+| `ldc2d_PP_velocity.mp4`        | PR-DNS parallel      | velocity |
+| `ldc2d_PP_pressure.mp4`        | PR-DNS parallel      | pressure |
+| `ldc2d_PP_velocity_vector.mp4` | PR-DNS parallel      | velocity vector field |
 | `ldc2d_FS_velocity.mp4` | FronTierCpp serial   | velocity |
 | `ldc2d_FS_pressure.mp4` | FronTierCpp serial   | pressure |
 | `ldc2d_FP_velocity.mp4` | FronTierCpp parallel | velocity |
