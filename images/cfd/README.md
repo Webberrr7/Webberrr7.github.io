@@ -27,10 +27,12 @@ PP = PR-DNS parallel. PR-DNS now writes 48 frames for both serial and parallel
 | `ldc2d_PP_velocity.mp4`        | PR-DNS parallel      | velocity |
 | `ldc2d_PP_pressure.mp4`        | PR-DNS parallel      | pressure |
 | `ldc2d_PP_velocity_vector.mp4` | PR-DNS parallel      | velocity vector field |
-| `ldc2d_FS_velocity.mp4` | FronTierCpp serial   | velocity |
-| `ldc2d_FS_pressure.mp4` | FronTierCpp serial   | pressure |
-| `ldc2d_FP_velocity.mp4` | FronTierCpp parallel | velocity |
-| `ldc2d_FP_pressure.mp4` | FronTierCpp parallel | pressure |
+| `ldc2d_FS_velocity.mp4`        | FronTierCpp serial   | velocity |
+| `ldc2d_FS_pressure.mp4`        | FronTierCpp serial   | pressure |
+| `ldc2d_FS_velocity_vector.mp4` | FronTierCpp serial   | velocity vector field |
+| `ldc2d_FP_velocity.mp4`        | FronTierCpp parallel | velocity |
+| `ldc2d_FP_pressure.mp4`        | FronTierCpp parallel | pressure |
+| `ldc2d_FP_velocity_vector.mp4` | FronTierCpp parallel | velocity vector field |
 
 To add or swap an animation, drop the `.mp4` here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block in
