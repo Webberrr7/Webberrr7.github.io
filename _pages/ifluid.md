@@ -122,6 +122,18 @@ parallel implementation must reproduce the serial result.
   </figure>
 </div>
 
+### FronTierCpp — Parallel on hpc1 (BNL cluster) (FPH)
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/ldc2d_FPH_velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Velocity Field</strong> — animation from a parallel FronTierCpp run on BNL's hpc1 cluster</figcaption>
+  </figure>
+</div>
+
 ---
 
 *More iFluid cases (Rayleigh–Taylor instability, flow past a sphere, vortex
