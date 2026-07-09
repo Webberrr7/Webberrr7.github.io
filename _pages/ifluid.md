@@ -84,9 +84,6 @@ corners. Run with the **FronTierCpp** solver in both serial and parallel
 (serial above parallel) so the two runs can be compared directly: a correct
 parallel implementation must reproduce the serial result.
 
-> Both runs advanced to step 10000 and wrote **708 output frames**. Each run
-> shows the **velocity vector field** alongside the **pressure** field.
-
 ### FronTierCpp — Serial (FS)
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
