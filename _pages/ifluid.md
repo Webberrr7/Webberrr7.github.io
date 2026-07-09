@@ -75,76 +75,19 @@ vortex structure.
 
 ---
 
-## Lid-Driven Cavity (2D) — Solver Comparison
+## Lid-Driven Cavity (2D)
 
-The same 2D lid-driven cavity test case, run with two different solvers —
-**FronTierCpp** and **PR-DNS** (Particle-Resolved Direct Numerical Simulation) —
-in both serial and parallel. Each solver's serial and parallel runs are grouped
-together (serial above parallel) so the two PR-DNS runs and the two FronTierCpp
-runs can each be compared directly.
+The most widely used **benchmark** for incompressible flow solvers: fluid in a
+square cavity whose top wall (the "lid") slides at constant velocity, driving a
+large primary vortex plus smaller counter-rotating vortices in the bottom
+corners. Run with the **FronTierCpp** solver in both serial and parallel
+(serial above parallel) so the two runs can be compared directly: a correct
+parallel implementation must reproduce the serial result.
 
-> All four configurations advanced to step 10000, but their visualization output
-> frequency differed: **FronTierCpp wrote 708 frames** while **PR-DNS wrote 48
-> frames** (for both serial and parallel).
+> Both runs advanced to step 10000 and wrote **708 output frames**. Each run
+> shows the **velocity vector field** alongside the **pressure** field.
 
-### PR-DNS — Serial (PS)
-
-<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d_PS_velocity.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
-  </figure>
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d_PS_pressure.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Pressure</strong></figcaption>
-  </figure>
-</div>
-
-### PR-DNS — Parallel (PP)
-
-<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d_PP_velocity.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
-  </figure>
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d_PP_pressure.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Pressure</strong></figcaption>
-  </figure>
-</div>
-
-### PR-DNS — Velocity Vector Field
-
-<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d_PS_velocity_vector.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Velocity Vector Field — PR-DNS Serial</strong></figcaption>
-  </figure>
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d_PP_velocity_vector.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Velocity Vector Field — PR-DNS Parallel</strong></figcaption>
-  </figure>
-</div>
-
-### FronTierCpp — Velocity Vector Field
+### FronTierCpp — Serial (FS)
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
   <figure style="flex:1 1 320px;margin:0;">
@@ -152,26 +95,7 @@ runs can each be compared directly.
       <source src="/images/cfd/ldc2d_FS_velocity_vector.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Velocity Vector Field — FronTierCpp Serial</strong></figcaption>
-  </figure>
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d_FP_velocity_vector.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Velocity Vector Field — FronTierCpp Parallel</strong></figcaption>
-  </figure>
-</div>
-
-### FronTierCpp — Serial (FS)
-
-<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
-  <figure style="flex:1 1 320px;margin:0;">
-    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d_FS_velocity.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
+    <figcaption style="text-align:center;"><strong>Velocity Vector Field</strong></figcaption>
   </figure>
   <figure style="flex:1 1 320px;margin:0;">
     <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
@@ -187,10 +111,10 @@ runs can each be compared directly.
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
   <figure style="flex:1 1 320px;margin:0;">
     <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/ldc2d_FP_velocity.mp4" type="video/mp4">
+      <source src="/images/cfd/ldc2d_FP_velocity_vector.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
+    <figcaption style="text-align:center;"><strong>Velocity Vector Field</strong></figcaption>
   </figure>
   <figure style="flex:1 1 320px;margin:0;">
     <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">

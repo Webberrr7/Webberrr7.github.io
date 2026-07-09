@@ -12,27 +12,18 @@ served at `/portfolio/`).
 | `TG-3d-parallel-velocity.mp4` | parallel | velocity |
 | `TG-3d-parallel-pressure.mp4` | parallel | pressure |
 
-## Lid-Driven Cavity (2D) — solver comparison
+## Lid-Driven Cavity (2D) — FronTierCpp serial vs. parallel
 
-Four configurations of the same 2D lid-driven cavity test case:
-FS = FronTierCpp serial, FP = FronTierCpp parallel, PS = PR-DNS serial,
-PP = PR-DNS parallel. PR-DNS now writes 48 frames for both serial and parallel
-(FronTierCpp writes 708 frames).
+FS = FronTierCpp serial, FP = FronTierCpp parallel. Both runs advanced to step
+10000 and wrote 708 output frames. Each run shows the velocity vector field
+alongside the pressure field.
 
 | File | Config | Field |
 |---|---|---|
-| `ldc2d_PS_velocity.mp4`        | PR-DNS serial        | velocity |
-| `ldc2d_PS_pressure.mp4`        | PR-DNS serial        | pressure |
-| `ldc2d_PS_velocity_vector.mp4` | PR-DNS serial        | velocity vector field |
-| `ldc2d_PP_velocity.mp4`        | PR-DNS parallel      | velocity |
-| `ldc2d_PP_pressure.mp4`        | PR-DNS parallel      | pressure |
-| `ldc2d_PP_velocity_vector.mp4` | PR-DNS parallel      | velocity vector field |
-| `ldc2d_FS_velocity.mp4`        | FronTierCpp serial   | velocity |
-| `ldc2d_FS_pressure.mp4`        | FronTierCpp serial   | pressure |
 | `ldc2d_FS_velocity_vector.mp4` | FronTierCpp serial   | velocity vector field |
-| `ldc2d_FP_velocity.mp4`        | FronTierCpp parallel | velocity |
-| `ldc2d_FP_pressure.mp4`        | FronTierCpp parallel | pressure |
+| `ldc2d_FS_pressure.mp4`        | FronTierCpp serial   | pressure |
 | `ldc2d_FP_velocity_vector.mp4` | FronTierCpp parallel | velocity vector field |
+| `ldc2d_FP_pressure.mp4`        | FronTierCpp parallel | pressure |
 
 To add or swap an animation, drop the `.mp4` here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block in
