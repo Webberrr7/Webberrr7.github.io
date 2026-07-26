@@ -25,6 +25,23 @@ alongside the pressure field.
 | `ldc2d_FP_velocity_vector.mp4` | FronTierCpp parallel | velocity vector field |
 | `ldc2d_FP_pressure.mp4`        | FronTierCpp parallel | pressure |
 
+## Cloud Chamber (ported from the climate PR-DNS code)
+
+| File | Case | Field |
+|---|---|---|
+| `TG2d_xvel.gif`        | Taylor–Green 2D | x-velocity |
+| `TG2d_yvel.gif`        | Taylor–Green 2D | y-velocity |
+| `TG2d_vort.gif`        | Taylor–Green 2D | vorticity |
+| `TG2d_temperature.gif` | Taylor–Green 2D | temperature |
+| `TG2d_supersat.gif`    | Taylor–Green 2D | supersaturation |
+| `TG2d_cloud.gif`       | Taylor–Green 2D | cloud |
+| `TG2d_comp.gif`        | Taylor–Green 2D | component |
+| `particle2d_vort.gif`        | Particles 2D | vorticity |
+| `particle2d_temperature.gif` | Particles 2D | temperature |
+| `particle2d_supersat.gif`    | Particles 2D | supersaturation |
+| `particle2d_comp.gif`        | Particles 2D | component |
+| `TG3d_CC_velocity_vector.mp4` | Taylor–Green 3D | velocity vector field |
+
 To add or swap an animation, drop the `.mp4` here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block in
 `_pages/ifluid.md`. Keep files small for fast loading (these range ~0.2–8 MB).

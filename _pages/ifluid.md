@@ -136,5 +136,103 @@ parallel implementation must reproduce the serial result.
 
 ---
 
+## Cloud Chamber
+
+Animations produced with the **Cloud-Chamber** solver ported from the
+**climate** PR-DNS code. The cases below show the flow fields together with the
+thermodynamic and microphysical fields (temperature, supersaturation, cloud
+water) that the cloud-chamber model evolves.
+
+### Taylor–Green (2D)
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/TG2d_xvel.gif" alt="Taylor-Green 2D x-velocity"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>X-Velocity</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/TG2d_yvel.gif" alt="Taylor-Green 2D y-velocity"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Y-Velocity</strong></figcaption>
+  </figure>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/TG2d_vort.gif" alt="Taylor-Green 2D vorticity"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Vorticity</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/TG2d_temperature.gif" alt="Taylor-Green 2D temperature"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Temperature</strong></figcaption>
+  </figure>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/TG2d_supersat.gif" alt="Taylor-Green 2D supersaturation"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Supersaturation</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/TG2d_cloud.gif" alt="Taylor-Green 2D cloud field"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Cloud</strong></figcaption>
+  </figure>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;justify-content:center;">
+  <figure style="flex:0 1 480px;margin:0;">
+    <img src="/images/cfd/TG2d_comp.gif" alt="Taylor-Green 2D component field"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Component</strong></figcaption>
+  </figure>
+</div>
+
+### Particles (2D)
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/particle2d_vort.gif" alt="Particle 2D vorticity"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Vorticity</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/particle2d_temperature.gif" alt="Particle 2D temperature"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Temperature</strong></figcaption>
+  </figure>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/particle2d_supersat.gif" alt="Particle 2D supersaturation"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Supersaturation</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;margin:0;">
+    <img src="/images/cfd/particle2d_comp.gif" alt="Particle 2D component field"
+         style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    <figcaption style="text-align:center;"><strong>Component</strong></figcaption>
+  </figure>
+</div>
+
+### Taylor–Green (3D) — Velocity Vector Field
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;justify-content:center;">
+  <figure style="flex:0 1 480px;margin:0;">
+    <video controls muted loop autoplay playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/TG3d_CC_velocity_vector.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Velocity Vector Field</strong></figcaption>
+  </figure>
+</div>
+
+---
+
 *More iFluid cases (Rayleigh–Taylor instability, flow past a sphere, vortex
 shedding) coming soon.*
