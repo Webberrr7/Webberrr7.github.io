@@ -30,8 +30,10 @@ and renders each via `{% include archive-single.html %}`.
 | `_publications/` | `publications.html` | Publications | `/publications/:path/` |
 | `_talks/` | `talks.html` | Talks | `/talks/:path/` |
 | `_teaching/` | `teaching.html` | Teaching | `/teaching/:path/` |
-| `_portfolio/` | `portfolio.html` | Portfolio | `/portfolio/:path/` |
 | `_posts/` | `year-archive.html` | Blog Posts | (dated permalink) |
+
+Note: there is **no** `_portfolio/` collection. The Portfolio nav entry points at
+`/portfolio/`, which is a hand-written page tree in `_pages/` (see below).
 
 A collection needs THREE things to work: (1) a `_folder/`, (2) an entry under
 `collections:` in `_config.yml` with `output: true` + `permalink`, and usually a
@@ -41,9 +43,18 @@ link. Removing a collection means undoing all three.
 ## Pages that are NOT collections
 
 - `about.md` → `/` — **homepage**.
-- `ifluid.md` → `/ifluid/` — **hand-written CFD gallery** (Taylor–Green vortex,
-  lid-driven cavity). Images go in `images/cfd/` (`taylor-green.gif`,
-  `lid-driven-cavity.gif`, optional `*-thumb.png`). Not backed by a collection.
+- **Portfolio tree** — hand-written CFD gallery, two levels, not backed by a
+  collection. All media lives in `images/cfd/` (see the README there for the
+  file → page map). The hub embeds no media; every animation sits on exactly
+  one child page.
+
+  | File in `_pages/` | Permalink |
+  |---|---|
+  | `ifluid.md` (hub) | `/portfolio/` |
+  | `portfolio-frontier-taylor-green.md` | `/portfolio/frontier/taylor-green/` |
+  | `portfolio-frontier-ldc2d.md` | `/portfolio/frontier/ldc2d/` |
+  | `portfolio-cloud-chamber-particle-2d.md` | `/portfolio/cloud-chamber/particle-2d/` |
+  | `portfolio-cloud-chamber-taylor-green.md` | `/portfolio/cloud-chamber/taylor-green/` |
 - `cv.md` → `/cv/` (Markdown CV, currently linked) and `cv-json.md` → `/cv-json/`
   (JSON-driven alternative, hidden by default). Switch which is linked in `navigation.yml`.
 - `markdown.md` → `/markdown/` — template's "Guide" demo page (Markdown/MathJax/
@@ -66,8 +77,11 @@ link. Removing a collection means undoing all three.
   `venue`, `location`, `date`. Locations feed the talk map.
 - **New teaching:** `_teaching/YYYY-...md`, `collection: teaching`, with `type`,
   `venue`, `date`.
-- **New portfolio item:** `_portfolio/slug.md`, `collection: portfolio`, with
-  `title` and an `excerpt` (the `excerpt` may embed a thumbnail `<img>`).
+- **New portfolio experiment:** add `_pages/portfolio-<project>-<slug>.md` with an
+  explicit `permalink: /portfolio/<project>/<slug>/`, a `[← Back to Portfolio](/portfolio/)`
+  link at the top, and the animations grouped by field. Then link it from an `h3`
+  under the matching project `h2` in `_pages/ifluid.md`, and add the files to the
+  table in `images/cfd/README.md`.
 
 ## Rendering features (from the Guide)
 
