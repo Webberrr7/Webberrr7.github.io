@@ -60,6 +60,7 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
 | `rbconv_xvel.mp4`        | Rayleigh–Bénard convection | x-velocity |
 | `rbconv_yvel.mp4`        | Rayleigh–Bénard convection | y-velocity |
 | `rbconv_temperature.mp4` | Rayleigh–Bénard convection | temperature |
+| `rbconv_velocity_vector.mp4` | Rayleigh–Bénard convection | velocity vector field |
 
 To add or swap an animation, drop the file here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block (or

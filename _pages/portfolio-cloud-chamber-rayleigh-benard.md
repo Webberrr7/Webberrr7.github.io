@@ -37,6 +37,16 @@ and cooled from above — is the canonical buoyancy-driven flow. The run uses
   </figure>
 </div>
 
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;justify-content:center;">
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/rbconv_velocity_vector.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Velocity Vector Field</strong></figcaption>
+  </figure>
+</div>
+
 ## Temperature
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;justify-content:center;">
