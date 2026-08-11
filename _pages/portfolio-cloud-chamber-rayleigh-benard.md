@@ -12,12 +12,9 @@ toc_sticky: true
 
 Animations produced with the **Cloud-Chamber** solver ported from the
 **climate** PR-DNS code. Rayleigh–Bénard convection — fluid heated from below
-and cooled from above — is the canonical buoyancy-driven flow, and here it
-exercises the Dirichlet (fixed wall temperature) boundary formulation.
-
-> Animations were generated from the solver's output and rendered in
-> **ParaView**. Each clip below loops automatically; use the controls to pause
-> or scrub.
+and cooled from above — is the canonical buoyancy-driven flow. The run uses
+**periodic** boundary conditions at the left and right sides, and a
+**Dirichlet** (fixed wall) condition at the top and bottom.
 
 ---
 
