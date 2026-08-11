@@ -52,6 +52,11 @@ Vorticity, temperature, and supersaturation fields from the particle-resolved
 Taylor–Green driven flow through the cloud-chamber model: velocity, vorticity,
 and the thermodynamic and microphysical fields, plus a 3D velocity vector field.
 
+### [Rayleigh–Bénard Convection](/portfolio/cloud-chamber/rayleigh-benard/)
+
+Buoyancy-driven convection between a heated bottom wall and a cooled top wall,
+exercising the Dirichlet boundary formulation: velocity and temperature fields.
+
 ---
 
 *More iFluid cases (Rayleigh–Taylor instability, flow past a sphere, vortex

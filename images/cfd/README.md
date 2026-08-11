@@ -9,6 +9,7 @@ page and embeds no media — each group below lives on exactly one child page.
 | `/portfolio/frontier/ldc2d/`            | `_pages/portfolio-frontier-ldc2d.md` |
 | `/portfolio/cloud-chamber/particle-2d/` | `_pages/portfolio-cloud-chamber-particle-2d.md` |
 | `/portfolio/cloud-chamber/taylor-green/`| `_pages/portfolio-cloud-chamber-taylor-green.md` |
+| `/portfolio/cloud-chamber/rayleigh-benard/` | `_pages/portfolio-cloud-chamber-rayleigh-benard.md` |
 
 ## Taylor–Green Vortex (3D) — serial vs. parallel
 
@@ -40,8 +41,9 @@ field; FPH contributes a velocity field only.
 
 ## Cloud Chamber (ported from the climate PR-DNS code)
 
-Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d) and
-`/portfolio/cloud-chamber/particle-2d/` (particle2d).
+Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
+`/portfolio/cloud-chamber/particle-2d/` (particle2d), and
+`/portfolio/cloud-chamber/rayleigh-benard/` (rbconv).
 
 | File | Case | Field |
 |---|---|---|
@@ -55,6 +57,9 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d) and
 | `particle2d_temperature.gif` | Particles 2D | temperature |
 | `particle2d_supersat.gif`    | Particles 2D | supersaturation |
 | `TG3d_CC_velocity_vector.mp4` | Taylor–Green 3D | velocity vector field |
+| `rbconv_xvel.mp4`        | Rayleigh–Bénard convection | x-velocity |
+| `rbconv_yvel.mp4`        | Rayleigh–Bénard convection | y-velocity |
+| `rbconv_temperature.mp4` | Rayleigh–Bénard convection | temperature |
 
 To add or swap an animation, drop the file here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block (or

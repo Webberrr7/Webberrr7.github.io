@@ -55,6 +55,7 @@ link. Removing a collection means undoing all three.
   | `portfolio-frontier-ldc2d.md` | `/portfolio/frontier/ldc2d/` |
   | `portfolio-cloud-chamber-particle-2d.md` | `/portfolio/cloud-chamber/particle-2d/` |
   | `portfolio-cloud-chamber-taylor-green.md` | `/portfolio/cloud-chamber/taylor-green/` |
+  | `portfolio-cloud-chamber-rayleigh-benard.md` | `/portfolio/cloud-chamber/rayleigh-benard/` |
 - `cv.md` → `/cv/` (Markdown CV, currently linked) and `cv-json.md` → `/cv-json/`
   (JSON-driven alternative, hidden by default). Switch which is linked in `navigation.yml`.
 - `markdown.md` → `/markdown/` — template's "Guide" demo page (Markdown/MathJax/
