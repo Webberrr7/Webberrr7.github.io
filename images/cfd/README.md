@@ -57,10 +57,13 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
 | `particle2d_temperature.gif` | Particles 2D | temperature |
 | `particle2d_supersat.gif`    | Particles 2D | supersaturation |
 | `TG3d_CC_velocity_vector.mp4` | Taylor–Green 3D | velocity vector field |
-| `rbconv_xvel.mp4`        | Rayleigh–Bénard convection | x-velocity |
-| `rbconv_yvel.mp4`        | Rayleigh–Bénard convection | y-velocity |
-| `rbconv_temperature.mp4` | Rayleigh–Bénard convection | temperature |
-| `rbconv_velocity_vector.mp4` | Rayleigh–Bénard convection | velocity vector field |
+| `rbconv_xvel.mp4`        | Rayleigh–Bénard convection 2D | x-velocity |
+| `rbconv_yvel.mp4`        | Rayleigh–Bénard convection 2D | y-velocity |
+| `rbconv_temperature.mp4` | Rayleigh–Bénard convection 2D | temperature |
+| `rbconv_velocity_vector.mp4` | Rayleigh–Bénard convection 2D | velocity vector field |
+| `rb_3d_vector_velocity.mp4`    | Rayleigh–Bénard convection 3D | velocity vector field |
+| `rb_3d_Yslice_temperature.mp4` | Rayleigh–Bénard convection 3D | temperature (Y-slice) |
+| `rb_3d_Zslice_temperature.mp4` | Rayleigh–Bénard convection 3D | temperature (Z-slice) |
 
 To add or swap an animation, drop the file here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block (or

@@ -55,7 +55,8 @@ and the thermodynamic and microphysical fields, plus a 3D velocity vector field.
 ### [Rayleigh–Bénard Convection](/portfolio/cloud-chamber/rayleigh-benard/)
 
 Buoyancy-driven convection between a heated bottom wall and a cooled top wall,
-exercising the Dirichlet boundary formulation: velocity and temperature fields.
+exercising the Dirichlet boundary formulation: velocity and temperature fields,
+in both 2D and 3D.
 
 ---
 
