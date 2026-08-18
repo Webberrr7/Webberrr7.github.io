@@ -61,37 +61,68 @@ and cooled from above — is the canonical buoyancy-driven flow. The run uses
 
 ## 3D Run
 
-The same convection case extended to **three dimensions**: the velocity vector
-field, plus temperature slices normal to the Y and Z axes.
+The same convection case extended to **three dimensions**, run in both
+**serial** and **parallel** so the two can be compared directly: the velocity
+vector field, plus temperature slices normal to the Y and Z axes.
 
 - **Rayleigh number:** Ra = 10000
 - **Computational grid:** 128 × 64 × 8
 - **Wall temperatures:** lower 270.75 K, upper 269.25 K
-- **Input file:** max time = 1200, max steps = 20000
+- **Input file:** max time = 300, max steps = 5000
 
-<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;justify-content:center;">
-  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
-    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/rb_3d_vector_velocity.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption style="text-align:center;"><strong>Velocity Vector Field</strong></figcaption>
-  </figure>
-</div>
+**Velocity vector field — serial vs. parallel**
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
   <figure style="flex:1 1 320px;max-width:480px;margin:0;">
     <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/rb_3d_Yslice_temperature.mp4" type="video/mp4">
+      <source src="/images/cfd/rb_3d_serial_velocity.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Temperature — Y-Slice</strong></figcaption>
+    <figcaption style="text-align:center;"><strong>Serial</strong></figcaption>
   </figure>
   <figure style="flex:1 1 320px;max-width:480px;margin:0;">
     <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/rb_3d_Zslice_temperature.mp4" type="video/mp4">
+      <source src="/images/cfd/rb_3d_parallel_velocity.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Temperature — Z-Slice</strong></figcaption>
+    <figcaption style="text-align:center;"><strong>Parallel</strong></figcaption>
+  </figure>
+</div>
+
+**Temperature (Y-slice) — serial vs. parallel**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/rb_3d_serial_Yslice_temperature.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/rb_3d_parallel_Yslice_temperature.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong></figcaption>
+  </figure>
+</div>
+
+**Temperature (Z-slice) — serial vs. parallel**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/rb_3d_serial_Zslice_temperature.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/rb_3d_parallel_Zslice_temperature.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong></figcaption>
   </figure>
 </div>
