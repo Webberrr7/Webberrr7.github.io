@@ -10,6 +10,7 @@ page and embeds no media — each group below lives on exactly one child page.
 | `/portfolio/cloud-chamber/particle-2d/` | `_pages/portfolio-cloud-chamber-particle-2d.md` |
 | `/portfolio/cloud-chamber/taylor-green/`| `_pages/portfolio-cloud-chamber-taylor-green.md` |
 | `/portfolio/cloud-chamber/rayleigh-benard/` | `_pages/portfolio-cloud-chamber-rayleigh-benard.md` |
+| `/portfolio/cloud-chamber/chamber-2d/` | `_pages/portfolio-cloud-chamber-chamber-2d.md` |
 
 ## Taylor–Green Vortex (3D) — serial vs. parallel
 
@@ -67,6 +68,23 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
 | `rb_3d_parallel_Yslice_temperature.mp4`| Rayleigh–Bénard convection 3D parallel | temperature (Y-slice) |
 | `rb_3d_serial_Zslice_temperature.mp4`  | Rayleigh–Bénard convection 3D serial   | temperature (Z-slice) |
 | `rb_3d_parallel_Zslice_temperature.mp4`| Rayleigh–Bénard convection 3D parallel | temperature (Z-slice) |
+
+## Chamber 2D (Dirichlet side walls)
+
+Page: `/portfolio/cloud-chamber/chamber-2d/`. The 2D chamber with all four
+boundaries at prescribed temperature (upper 270.75 K, lower 269.25 K, sides
+270 K); max time 300, max steps 5000. Serial vs. parallel per field.
+
+| File | Run | Field |
+|---|---|---|
+| `chamber2d_xvel_serial.mp4`            | serial   | x-velocity |
+| `chamber2d_xvel_parallel.mp4`          | parallel | x-velocity |
+| `chamber2d_yvel_serial.mp4`            | serial   | y-velocity |
+| `chamber2d_yvel_parallel.mp4`          | parallel | y-velocity |
+| `chamber2d_temperature_serial.mp4`     | serial   | temperature |
+| `chamber2d_temperature_parallel.mp4`   | parallel | temperature |
+| `chamber2d_vector_velocity_serial.mp4`   | serial   | velocity vector field |
+| `chamber2d_vector_velocity_parallel.mp4` | parallel | velocity vector field |
 
 To add or swap an animation, drop the file here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block (or
