@@ -72,7 +72,7 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
 ## Chamber 2D (Dirichlet side walls)
 
 Page: `/portfolio/cloud-chamber/chamber-2d/`. The 2D chamber with all four
-boundaries at prescribed temperature (upper 270.75 K, lower 269.25 K, sides
+boundaries at prescribed temperature (lower 270.75 K, upper 269.25 K, sides
 270 K); max time 300, max steps 5000. Serial vs. parallel per field.
 
 | File | Run | Field |

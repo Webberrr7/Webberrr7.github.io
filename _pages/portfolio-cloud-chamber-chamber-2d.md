@@ -17,7 +17,7 @@ side walls, so all four boundaries now hold a prescribed temperature. Each
 field is shown for the **serial** run next to the **parallel** run so the two
 can be compared directly.
 
-- **Wall temperatures:** upper 270.75 K, lower 269.25 K, side walls 270 K
+- **Wall temperatures:** lower 270.75 K, upper 269.25 K, side walls 270 K
 - **Input file:** max time = 300, max steps = 5000
 
 ---
