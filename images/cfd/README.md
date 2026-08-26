@@ -69,22 +69,29 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
 | `rb_3d_serial_Zslice_temperature.mp4`  | Rayleigh–Bénard convection 3D serial   | temperature (Z-slice) |
 | `rb_3d_parallel_Zslice_temperature.mp4`| Rayleigh–Bénard convection 3D parallel | temperature (Z-slice) |
 
-## Chamber 2D (Dirichlet side walls)
+## Chamber (Dirichlet walls)
 
-Page: `/portfolio/cloud-chamber/chamber-2d/`. The 2D chamber with all four
-boundaries at prescribed temperature (lower 270.75 K, upper 269.25 K, sides
-270 K); max time 300, max steps 5000. Serial vs. parallel per field.
+Page: `/portfolio/cloud-chamber/chamber-2d/`. The chamber with every boundary
+at prescribed temperature (bottom 270.75 K, top 269.25 K, other walls 270 K);
+max time 300, max steps 5000. Serial vs. parallel per field. The 3D run uses
+domain [0,2]×[0,1]×[0,1] on a 128×64×64 grid.
 
 | File | Run | Field |
 |---|---|---|
-| `chamber2d_xvel_serial.mp4`            | serial   | x-velocity |
-| `chamber2d_xvel_parallel.mp4`          | parallel | x-velocity |
-| `chamber2d_yvel_serial.mp4`            | serial   | y-velocity |
-| `chamber2d_yvel_parallel.mp4`          | parallel | y-velocity |
-| `chamber2d_temperature_serial.mp4`     | serial   | temperature |
-| `chamber2d_temperature_parallel.mp4`   | parallel | temperature |
-| `chamber2d_vector_velocity_serial.mp4`   | serial   | velocity vector field |
-| `chamber2d_vector_velocity_parallel.mp4` | parallel | velocity vector field |
+| `chamber2d_xvel_serial.mp4`            | 2D serial   | x-velocity |
+| `chamber2d_xvel_parallel.mp4`          | 2D parallel | x-velocity |
+| `chamber2d_yvel_serial.mp4`            | 2D serial   | y-velocity |
+| `chamber2d_yvel_parallel.mp4`          | 2D parallel | y-velocity |
+| `chamber2d_temperature_serial.mp4`     | 2D serial   | temperature |
+| `chamber2d_temperature_parallel.mp4`   | 2D parallel | temperature |
+| `chamber2d_vector_velocity_serial.mp4`   | 2D serial   | velocity vector field |
+| `chamber2d_vector_velocity_parallel.mp4` | 2D parallel | velocity vector field |
+| `chamber3d_vector_velocity_serial.mp4`   | 3D serial   | velocity vector field |
+| `chamber3d_vector_velocity_parallel.mp4` | 3D parallel | velocity vector field |
+| `chamber3d_serial_tz.mp4`   | 3D serial   | temperature (Z-slice) |
+| `chamber3d_parallel_tz.mp4` | 3D parallel | temperature (Z-slice) |
+| `chamber3d_serial_tx.mp4`   | 3D serial   | temperature (X-slice) |
+| `chamber3d_parallel_ty.mp4` | 3D parallel | temperature (Y-slice) |
 
 To add or swap an animation, drop the file here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block (or
