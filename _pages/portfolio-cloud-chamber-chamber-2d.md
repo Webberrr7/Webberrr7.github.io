@@ -150,7 +150,7 @@ temperature — heated bottom, cooled top, all other walls at 270 K.
   </figure>
 </div>
 
-**Temperature (X / Y slices)**
+**Temperature (X-slice) — serial vs. parallel**
 
 <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
   <figure style="flex:1 1 320px;max-width:480px;margin:0;">
@@ -158,13 +158,13 @@ temperature — heated bottom, cooled top, all other walls at 270 K.
       <source src="/images/cfd/chamber3d_serial_tx.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>X-Slice — Serial</strong></figcaption>
+    <figcaption style="text-align:center;"><strong>Serial</strong></figcaption>
   </figure>
   <figure style="flex:1 1 320px;max-width:480px;margin:0;">
     <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
-      <source src="/images/cfd/chamber3d_parallel_ty.mp4" type="video/mp4">
+      <source src="/images/cfd/chamber3d_parallel_tx.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <figcaption style="text-align:center;"><strong>Y-Slice — Parallel</strong></figcaption>
+    <figcaption style="text-align:center;"><strong>Parallel</strong></figcaption>
   </figure>
 </div>

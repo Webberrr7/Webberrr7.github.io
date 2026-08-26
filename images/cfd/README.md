@@ -91,7 +91,7 @@ domain [0,2]×[0,1]×[0,1] on a 128×64×64 grid.
 | `chamber3d_serial_tz.mp4`   | 3D serial   | temperature (Z-slice) |
 | `chamber3d_parallel_tz.mp4` | 3D parallel | temperature (Z-slice) |
 | `chamber3d_serial_tx.mp4`   | 3D serial   | temperature (X-slice) |
-| `chamber3d_parallel_ty.mp4` | 3D parallel | temperature (Y-slice) |
+| `chamber3d_parallel_tx.mp4` | 3D parallel | temperature (X-slice) |
 
 To add or swap an animation, drop the file here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block (or
