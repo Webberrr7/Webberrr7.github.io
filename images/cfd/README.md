@@ -10,7 +10,7 @@ page and embeds no media — each group below lives on exactly one child page.
 | `/portfolio/cloud-chamber/particle-2d/` | `_pages/portfolio-cloud-chamber-particle-2d.md` |
 | `/portfolio/cloud-chamber/taylor-green/`| `_pages/portfolio-cloud-chamber-taylor-green.md` |
 | `/portfolio/cloud-chamber/rayleigh-benard/` | `_pages/portfolio-cloud-chamber-rayleigh-benard.md` |
-| `/portfolio/cloud-chamber/chamber-2d/` | `_pages/portfolio-cloud-chamber-chamber-2d.md` |
+| `/portfolio/cloud-chamber/chamber/` | `_pages/portfolio-cloud-chamber-chamber.md` |
 
 ## Taylor–Green Vortex (3D) — serial vs. parallel
 
@@ -71,7 +71,7 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
 
 ## Chamber (Dirichlet walls)
 
-Page: `/portfolio/cloud-chamber/chamber-2d/`. The chamber with every boundary
+Page: `/portfolio/cloud-chamber/chamber/`. The chamber with every boundary
 at prescribed temperature (bottom 270.75 K, top 269.25 K, other walls 270 K);
 max time 300, max steps 5000. Serial vs. parallel per field. The 3D run uses
 domain [0,2]×[0,1]×[0,1] on a 128×64×64 grid.

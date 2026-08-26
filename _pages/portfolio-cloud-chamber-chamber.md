@@ -1,7 +1,9 @@
 ---
 layout: single
 title: "Chamber"
-permalink: /portfolio/cloud-chamber/chamber-2d/
+permalink: /portfolio/cloud-chamber/chamber/
+redirect_from:
+  - /portfolio/cloud-chamber/chamber-2d/
 author_profile: true
 toc: true
 toc_label: "Fields"

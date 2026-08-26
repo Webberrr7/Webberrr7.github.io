@@ -58,7 +58,7 @@ Buoyancy-driven convection between a heated bottom wall and a cooled top wall,
 exercising the Dirichlet boundary formulation: velocity and temperature fields,
 in both 2D and 3D.
 
-### [Chamber](/portfolio/cloud-chamber/chamber-2d/)
+### [Chamber](/portfolio/cloud-chamber/chamber/)
 
 The chamber with the periodic side boundaries replaced by Dirichlet
 (fixed-temperature) walls — every boundary prescribed. Velocity, temperature,
