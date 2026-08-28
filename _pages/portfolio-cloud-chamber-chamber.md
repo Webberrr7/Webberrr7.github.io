@@ -170,3 +170,85 @@ temperature — heated bottom, cooled top, all other walls at 270 K.
     <figcaption style="text-align:center;"><strong>Parallel</strong></figcaption>
   </figure>
 </div>
+
+## 3D Box Run
+
+A second 3D configuration in a **box** geometry, again with **Dirichlet**
+conditions on every wall, run in **serial** and **parallel**: the velocity
+field, plus temperature slices normal to each of the three axes.
+
+**Velocity — serial vs. parallel**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d_box_serial_velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d_box_parallel_velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong></figcaption>
+  </figure>
+</div>
+
+**Temperature (X-slice) — serial vs. parallel**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d_box_serial_temperature_xslice.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d_box_parallel_temperature_xslice.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong></figcaption>
+  </figure>
+</div>
+
+**Temperature (Y-slice) — serial vs. parallel**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d_box_serial_temperature_yslice.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d_box_parallel_temperature_yslice.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong></figcaption>
+  </figure>
+</div>
+
+**Temperature (Z-slice) — serial vs. parallel**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d_box_serial_temperature_zslice.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Serial</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d_box_parallel_temperature_zslice.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Parallel</strong></figcaption>
+  </figure>
+</div>
