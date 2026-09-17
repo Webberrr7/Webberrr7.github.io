@@ -71,10 +71,11 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
 
 ## Chamber (Dirichlet walls)
 
-Page: `/portfolio/cloud-chamber/chamber/`. The chamber with every boundary
+Page: `/portfolio/cloud-chamber/chamber/`. The 2D chamber has every boundary
 at prescribed temperature (bottom 270.75 K, top 269.25 K, other walls 270 K);
-max time 300, max steps 5000. Serial vs. parallel per field. The 3D run uses
-domain [0,2]×[0,1]×[0,1] on a 128×64×64 grid.
+max time 300, max steps 5000, serial vs. parallel per field. `chamber3d128` is
+the 0.5 m cubic Π-Chamber Case 3 run on a uniform 128³ grid, 64 MPI ranks,
+Ra ≈ 4.5×10⁷, Pr ≈ 0.79, frames every 5 s to t = 300 s.
 
 | File | Run | Field |
 |---|---|---|
@@ -86,20 +87,10 @@ domain [0,2]×[0,1]×[0,1] on a 128×64×64 grid.
 | `chamber2d_temperature_parallel.mp4`   | 2D parallel | temperature |
 | `chamber2d_vector_velocity_serial.mp4`   | 2D serial   | velocity vector field |
 | `chamber2d_vector_velocity_parallel.mp4` | 2D parallel | velocity vector field |
-| `chamber3d_vector_velocity_serial.mp4`   | 3D serial   | velocity vector field |
-| `chamber3d_vector_velocity_parallel.mp4` | 3D parallel | velocity vector field |
-| `chamber3d_serial_tz.mp4`   | 3D serial   | temperature (Z-slice) |
-| `chamber3d_parallel_tz.mp4` | 3D parallel | temperature (Z-slice) |
-| `chamber3d_serial_tx.mp4`   | 3D serial   | temperature (X-slice) |
-| `chamber3d_parallel_tx.mp4` | 3D parallel | temperature (X-slice) |
-| `chamber3d_box_serial_velocity.mp4`   | 3D box serial   | velocity |
-| `chamber3d_box_parallel_velocity.mp4` | 3D box parallel | velocity |
-| `chamber3d_box_serial_temperature_xslice.mp4`   | 3D box serial   | temperature (X-slice) |
-| `chamber3d_box_parallel_temperature_xslice.mp4` | 3D box parallel | temperature (X-slice) |
-| `chamber3d_box_serial_temperature_yslice.mp4`   | 3D box serial   | temperature (Y-slice) |
-| `chamber3d_box_parallel_temperature_yslice.mp4` | 3D box parallel | temperature (Y-slice) |
-| `chamber3d_box_serial_temperature_zslice.mp4`   | 3D box serial   | temperature (Z-slice) |
-| `chamber3d_box_parallel_temperature_zslice.mp4` | 3D box parallel | temperature (Z-slice) |
+| `chamber3d128_velocity.mp4`              | 3D 128³ | velocity |
+| `chamber3d128_temperature_xslice.mp4`   | 3D 128³ | temperature (X-slice) |
+| `chamber3d128_temperature_yslice.mp4`   | 3D 128³ | temperature (Y-slice) |
+| `chamber3d128_temperature_zslice.mp4`   | 3D 128³ | temperature (Z-slice) |
 
 To add or swap an animation, drop the file here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block (or
