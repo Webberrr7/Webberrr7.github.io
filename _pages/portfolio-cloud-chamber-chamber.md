@@ -119,7 +119,7 @@ Navier–Stokes, projection method, Crank–Nicolson scalars).
 - **Output:** frames every 5 s
 
 The case was run at two resolutions. Both advance at advective CFL = 0.75 to
-t = 300 s; they differ only in grid, cost, and colour scale:
+t = 300 s; they differ only in grid and cost:
 
 |  | **128³** | **256³** |
 |---|---|---|
@@ -128,7 +128,6 @@ t = 300 s; they differ only in grid, cost, and colour scale:
 | Time step | Δt ≈ 0.0135 s | Δt ≈ 0.0070 s |
 | Steps | 21,800 at 1.47 s/step | 42,882 at 1.91 s/step |
 | Cost | ≈ 9 node-hours | 22 h 45 min wall, ≈ 182 node-hours |
-| Colour scale | temperature fixed to the wall range 282.9–286.0 K | fixed to the last frame's range: T 282.94–285.92 K, \|u\| 0–0.134 m/s |
 
 ### 128³
 
