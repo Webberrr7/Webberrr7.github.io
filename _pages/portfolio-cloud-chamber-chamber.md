@@ -222,10 +222,10 @@ The four series:
 
 | Series | Held fixed | Varied | Range | Points |
 |---|---|---|---|---|
-| Weak, 32³/rank | 32³ cells per rank | total grid grows with ranks | 8 → 1000 ranks (grid 64³ → 320³) | 8 |
-| Weak, 64³/rank | 64³ cells per rank | total grid grows with ranks | 1 → 512 ranks (grid 64³ → 512³) | 8 |
 | Strong, 128³ | total grid 128³ | cells per rank shrink | 8 → 512 ranks (64³ → 16³ cells/rank) | 5 |
 | Strong, 256³ | total grid 256³ | cells per rank shrink | 64 → 1024 ranks (64³ → 16³ cells/rank) | 5 |
+| Weak, 32³/rank | 32³ cells per rank | total grid grows with ranks | 8 → 1000 ranks (grid 64³ → 320³) | 8 |
+| Weak, 64³/rank | 64³ cells per rank | total grid grows with ranks | 1 → 512 ranks (grid 64³ → 512³) | 8 |
 
 
 
