@@ -97,6 +97,11 @@ and 256³ (512 ranks, 8 nodes).
 | `chamber3d256_temperature_yslice.mp4`   | 3D 256³ | temperature (Y-slice) |
 | `chamber3d256_temperature_zslice.mp4`   | 3D 256³ | temperature (Z-slice) |
 
+Scaling-study figures on the same page: `chamber3d_scaling_strong.png`,
+`chamber3d_scaling_weak.png`, `chamber3d_scaling_per_routine.png` (Perlmutter,
+64 ranks/node). The full per-routine timing table lives at
+`files/chamber3d-scaling-table.csv`.
+
 To add or swap an animation, drop the file here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block (or
 an `<img>` for a GIF) in the relevant child page above. Keep files small for

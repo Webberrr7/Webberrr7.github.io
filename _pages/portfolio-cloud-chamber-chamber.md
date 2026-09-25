@@ -208,3 +208,58 @@ t = 300 s; they differ only in grid and cost:
     <figcaption style="text-align:center;"><strong>Temperature (Z-slice)</strong></figcaption>
   </figure>
 </div>
+
+### Scaling
+
+How the solver scales on **Perlmutter** (64 ranks per node): **weak scaling**
+holds the work per rank fixed at 32³ or 64³ cells while adding ranks; **strong
+scaling** holds the total grid fixed at 128³ or 256³ and divides it over more
+ranks. Entries are whole-step times in seconds per time step.
+
+| Ranks (nodes) | Weak 32³/rank | Weak 64³/rank | Strong 128³ | Strong 256³ |
+|---|---|---|---|---|
+| 1 (1)     | —     | 6.327 | —      | —     |
+| 8 (1)     | 1.044 | 7.783 | 7.783  | —     |
+| 27 (1)    | 1.354 | 15.67 | —      | —     |
+| 64 (1)    | 1.659 | 20.03 | 1.659  | 20.00 |
+| 125 (2)   | 2.042 | 20.71 | —      | —     |
+| 128 (2)   | —     | —     | 1.002  | 9.719 |
+| 216 (4)   | 2.127 | 20.96 | —      | —     |
+| 256 (4)   | —     | —     | 0.6654 | 4.783 |
+| 343 (6)   | 2.218 | 23.99 | —      | —     |
+| 512 (8)   | 2.432 | 25.94 | 0.6013 | 2.432 |
+| 1000 (16) | 3.560 | —     | —      | —     |
+| 1024 (16) | —     | —     | —      | 2.335 |
+
+Full per-routine timings:
+[chamber3d-scaling-table.csv](/files/chamber3d-scaling-table.csv)
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;justify-content:center;">
+  <figure style="flex:1 1 320px;max-width:640px;margin:0;">
+    <a href="/images/cfd/chamber3d_scaling_strong.png">
+      <img src="/images/cfd/chamber3d_scaling_strong.png" alt="Strong scaling: time per step vs. MPI ranks"
+           style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    </a>
+    <figcaption style="text-align:center;"><strong>Strong scaling</strong> — time per step at fixed total grid (128³, 256³)</figcaption>
+  </figure>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;justify-content:center;">
+  <figure style="flex:1 1 320px;max-width:640px;margin:0;">
+    <a href="/images/cfd/chamber3d_scaling_weak.png">
+      <img src="/images/cfd/chamber3d_scaling_weak.png" alt="Weak scaling: time per step at fixed cells per rank"
+           style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    </a>
+    <figcaption style="text-align:center;"><strong>Weak scaling</strong> — time per step at fixed cells per rank (32³, 64³)</figcaption>
+  </figure>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;justify-content:center;">
+  <figure style="flex:1 1 320px;max-width:640px;margin:0;">
+    <a href="/images/cfd/chamber3d_scaling_per_routine.png">
+      <img src="/images/cfd/chamber3d_scaling_per_routine.png" alt="Per-routine time per step for all four series"
+           style="width:100%;border:1px solid #ddd;border-radius:6px;">
+    </a>
+    <figcaption style="text-align:center;"><strong>Per-routine time per step</strong> — all four series</figcaption>
+  </figure>
+</div>
