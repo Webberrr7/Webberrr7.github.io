@@ -73,9 +73,10 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
 
 Page: `/portfolio/cloud-chamber/chamber/`. The 2D chamber has every boundary
 at prescribed temperature (bottom 270.75 K, top 269.25 K, other walls 270 K);
-max time 300, max steps 5000, serial vs. parallel per field. `chamber3d128` is
-the 0.5 m cubic Π-Chamber Case 3 run on a uniform 128³ grid, 64 MPI ranks,
-Ra ≈ 4.5×10⁷, Pr ≈ 0.79, frames every 5 s to t = 300 s.
+max time 300, max steps 5000, serial vs. parallel per field. `chamber3d` is
+the 0.5 m cubic Π-Chamber Case 3 case (Ra ≈ 4.5×10⁷, Pr ≈ 0.79, frames every
+5 s to t = 300 s), run at two resolutions: 128³ (64 ranks, 1 Perlmutter node)
+and 256³ (512 ranks, 8 nodes).
 
 | File | Run | Field |
 |---|---|---|
@@ -91,6 +92,10 @@ Ra ≈ 4.5×10⁷, Pr ≈ 0.79, frames every 5 s to t = 300 s.
 | `chamber3d128_temperature_xslice.mp4`   | 3D 128³ | temperature (X-slice) |
 | `chamber3d128_temperature_yslice.mp4`   | 3D 128³ | temperature (Y-slice) |
 | `chamber3d128_temperature_zslice.mp4`   | 3D 128³ | temperature (Z-slice) |
+| `chamber3d256_velocity.mp4`              | 3D 256³ | velocity |
+| `chamber3d256_temperature_xslice.mp4`   | 3D 256³ | temperature (X-slice) |
+| `chamber3d256_temperature_yslice.mp4`   | 3D 256³ | temperature (Y-slice) |
+| `chamber3d256_temperature_zslice.mp4`   | 3D 256³ | temperature (Z-slice) |
 
 To add or swap an animation, drop the file here and reference it from a
 `<video><source src="/images/cfd/NAME.mp4" type="video/mp4"></video>` block (or

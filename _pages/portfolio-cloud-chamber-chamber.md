@@ -102,7 +102,9 @@ The 2D run:
   </figure>
 </div>
 
-## chamber3d128
+<a id="chamber3d128"></a>
+
+## chamber3d
 
 Dry Rayleigh–Bénard convection in a **0.5 m cubic cavity with six isothermal
 walls** — the reduced-Ra configuration of the BNL Π-Chamber Case 3, computed
@@ -114,12 +116,21 @@ Navier–Stokes, projection method, Crank–Nicolson scalars).
 - **Air:** ν = 1.5×10⁻⁵ m²/s, α = 1.9×10⁻⁵ m²/s → **Ra ≈ 4.5×10⁷**, **Pr ≈ 0.79**
   (free-fall velocity 0.227 m/s, free-fall time ≈ 2.2 s); started from rest with
   a small temperature perturbation
-- **Grid:** uniform **128³** (h = 3.9 mm), 4×4×4 decomposition, **64 MPI ranks**
-  on one Perlmutter node
-- **Time stepping:** advective CFL = 0.75 → Δt ≈ 0.0135 s; 21,800 steps to
-  t = 300 s at 1.47 s/step (≈ 9 node-hours)
-- **Output:** frames every 5 s; temperature colour scale fixed to the wall range
-  282.9–286.0 K
+- **Output:** frames every 5 s
+
+The case was run at two resolutions. Both advance at advective CFL = 0.75 to
+t = 300 s; they differ only in grid, cost, and colour scale:
+
+|  | **128³** | **256³** |
+|---|---|---|
+| Grid spacing | h = 3.9 mm | h = 1.95 mm |
+| Decomposition | 4×4×4, 64 ranks on 1 Perlmutter node | 8×8×8, 512 ranks on 8 nodes |
+| Time step | Δt ≈ 0.0135 s | Δt ≈ 0.0070 s |
+| Steps | 21,800 at 1.47 s/step | 42,882 at 1.91 s/step |
+| Cost | ≈ 9 node-hours | 22 h 45 min wall, ≈ 182 node-hours |
+| Colour scale | temperature fixed to the wall range 282.9–286.0 K | fixed to the last frame's range: T 282.94–285.92 K, \|u\| 0–0.134 m/s |
+
+### 128³
 
 **Velocity and temperature (X-slice)**
 
@@ -153,6 +164,46 @@ Navier–Stokes, projection method, Crank–Nicolson scalars).
   <figure style="flex:1 1 320px;max-width:480px;margin:0;">
     <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
       <source src="/images/cfd/chamber3d128_temperature_zslice.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Temperature (Z-slice)</strong></figcaption>
+  </figure>
+</div>
+
+### 256³
+
+**Velocity and temperature (X-slice)**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d256_velocity.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Velocity</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d256_temperature_xslice.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Temperature (X-slice)</strong></figcaption>
+  </figure>
+</div>
+
+**Temperature — Y- and Z-slices**
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;">
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d256_temperature_yslice.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption style="text-align:center;"><strong>Temperature (Y-slice)</strong></figcaption>
+  </figure>
+  <figure style="flex:1 1 320px;max-width:480px;margin:0;">
+    <video controls autoplay loop muted playsinline preload="metadata" style="width:100%;border:1px solid #ddd;border-radius:6px;">
+      <source src="/images/cfd/chamber3d256_temperature_zslice.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <figcaption style="text-align:center;"><strong>Temperature (Z-slice)</strong></figcaption>
