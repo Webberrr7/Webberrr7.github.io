@@ -107,12 +107,14 @@ The 2D run:
 ## chamber3d
 
 Dry Rayleigh–Bénard convection in a **0.5 m cubic cavity with six isothermal
-walls** — the reduced-Ra configuration of the BNL Π-Chamber Case 3, computed
+walls** — the reduced-Ra configuration of the BNL convection cloud chamber
+Case 3, computed
 with the particle-resolved DNS code built on **FronTier++** (incompressible
 Navier–Stokes, projection method, Crank–Nicolson scalars).
 
 - **Walls:** bottom 285.95 K, top 282.95 K, four sides 282.93–285.76 K — a 3 K
-  vertical difference, scaled from Π-Chamber Case 3 about T₀ = 284.45 K
+  vertical difference, scaled from convection cloud chamber Case 3 about
+  T₀ = 284.45 K
 - **Air:** ν = 1.5×10⁻⁵ m²/s, α = 1.9×10⁻⁵ m²/s → **Ra ≈ 4.5×10⁷**, **Pr ≈ 0.79**
   (free-fall velocity 0.227 m/s, free-fall time ≈ 2.2 s); started from rest with
   a small temperature perturbation

@@ -74,7 +74,7 @@ Pages: `/portfolio/cloud-chamber/taylor-green/` (TG2d + TG3d),
 Page: `/portfolio/cloud-chamber/chamber/`. The 2D chamber has every boundary
 at prescribed temperature (bottom 270.75 K, top 269.25 K, other walls 270 K);
 max time 300, max steps 5000, serial vs. parallel per field. `chamber3d` is
-the 0.5 m cubic Π-Chamber Case 3 case (Ra ≈ 4.5×10⁷, Pr ≈ 0.79, frames every
+the 0.5 m cubic convection cloud chamber Case 3 (Ra ≈ 4.5×10⁷, Pr ≈ 0.79, frames every
 5 s to t = 300 s), run at two resolutions: 128³ (64 ranks, 1 Perlmutter node)
 and 256³ (512 ranks, 8 nodes).
 
